@@ -1,3 +1,4 @@
+from upload_to_drive import upload_file_to_drive
 from flask import Flask, request, abort
 from linebot import LineBotApi, WebhookHandler
 from linebot.exceptions import InvalidSignatureError
@@ -91,6 +92,7 @@ def handle_image(event):
     try:
         with open(file_path, 'wb') as f:
             f.write(image_bytes.getvalue())
+            upload_file_to_drive(file_path, os.path.basename(file_path))
     except Exception as e:
         print(f"[錯誤] 儲存圖片失敗: {e}")
         return
