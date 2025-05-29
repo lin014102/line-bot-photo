@@ -10,3 +10,16 @@ services:
         value: 27ebdd000f8a4e674a505c184452ea1f
       - key: CHANNEL_ACCESS_TOKEN
         value: YryJhncuBcIsr3JAkiZjpMuTgsOVJuzEJxEirbT6UforkbEfMIGFjMrfFkJ3ytiI1uBk376jL4c5sL9uZkIp9h0YQ4kqlIRu49MVgBFp3EJfcGk7Wfu0MEYLjaKk3rQm4Mu5aNqBvEgZBDjZPcGXKQdB04t89/1O/w1cDnyilFU=
+=======
+services:
+  - type: web
+    name: line-bot
+    env: python
+    plan: free
+    buildCommand: ""
+    startCommand: python app.py
+    envVars:
+      - key: CHANNEL_SECRET
+        value: 27ebdd000f8a4e674a505c184452ea1f
+      - key: CHANNEL_ACCESS_TOKEN
+        value: YryJhncuBcIsr3JAkiZjpMuTgsOVJuzEJxEirbT6UforkbEfMIGFjMrfFkJ3ytiI1uBk376jL4c5sL9uZkIp9h0YQ4kqlIRu49MVgBFp3EJfcGk7Wfu0MEYLjaKk3rQm4Mu5aNqBvEgZBDjZPcGXKQdB04t89/1O/w1cDnyilFU=
